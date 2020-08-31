@@ -49,4 +49,5 @@ jobs:
           name: run lint
           command: |
             . venv/bin/activate
-            make lint
+            hadolint Dockerfile
+            pylint --disable=R,C,W1203 app.py
